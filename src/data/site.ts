@@ -44,8 +44,10 @@ export const business = {
 
 /* ==========================================================================
    LOCATIONS
-   mapsEmbed: search the address on Google Maps, choose Share > Embed a map,
-   and copy the src="..." value. No API key is needed or should ever be added.
+   Both links are driven by the exact coordinates of each base, so "Directions"
+   drops the pin on the doorway rather than on a street name that Google may
+   resolve to somewhere else. To move a base, replace the two numbers in both
+   the mapsLink and the mapsEmbed. No API key is needed or should ever be added.
    ========================================================================== */
 
 export type Location = {
@@ -65,10 +67,8 @@ export const locations: Location[] = [
       'Phase 5, Aya Nagar Extension, Aya Nagar',
       'New Delhi, Delhi 110047',
     ],
-    mapsLink:
-      'https://www.google.com/maps/search/?api=1&query=A1%2F116%2C+near+Shiv+Durga+Mandir%2C+Phase+5%2C+Aya+Nagar+Extension%2C+Aya+Nagar%2C+New+Delhi%2C+Delhi+110047',
-    mapsEmbed:
-      'https://maps.google.com/maps?q=A1%2F116%20Aya%20Nagar%20Extension%20Phase%205%20New%20Delhi%20110047&z=15&output=embed',
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=28.473937%2C77.128755',
+    mapsEmbed: 'https://maps.google.com/maps?q=28.473937,77.128755&z=16&output=embed',
   },
   {
     id: 'gurugram',
@@ -78,10 +78,8 @@ export const locations: Location[] = [
       'Golf Course Road, Sector 27',
       'Gurugram, Haryana',
     ],
-    mapsLink:
-      'https://www.google.com/maps/search/?api=1&query=Golf+Course+Road%2C+Sector+27%2C+Gurugram%2C+Haryana',
-    mapsEmbed:
-      'https://maps.google.com/maps?q=Golf%20Course%20Road%20Sector%2027%20Gurugram%20Haryana&z=14&output=embed',
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=28.466206%2C77.089936',
+    mapsEmbed: 'https://maps.google.com/maps?q=28.466206,77.089936&z=16&output=embed',
   },
 ]
 
