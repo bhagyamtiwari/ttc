@@ -10,7 +10,6 @@ import ProductGrid from './components/ProductGrid'
 import ServiceStrip from './components/ServiceStrip'
 import SourcingBand from './components/SourcingBand'
 import UtilityStrip from './components/UtilityStrip'
-import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </>
   )
 }

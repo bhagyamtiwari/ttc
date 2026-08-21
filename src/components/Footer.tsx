@@ -11,7 +11,7 @@ import { business, navLinks, waLinkProps, whatsappHref } from '../data/site'
  */
 export default function Footer() {
   return (
-    <footer className="border-t-[3px] border-red bg-paperDeep pb-28 pt-16 text-ink sm:pb-16 md:pt-20">
+    <footer className="border-t-[3px] border-red bg-paperDeep pb-16 pt-16 text-ink md:pt-20">
       <div className="shell flex flex-col items-center text-center">
         <Logo size="large" className="text-left" />
 
@@ -68,7 +68,9 @@ export default function Footer() {
 
         <div className="mt-10 w-full border-t border-rule pt-6">
           <p className="text-[15px] text-inkSoft">
-            &copy; 2026 {business.name}. All rights reserved.
+            &copy; 2026 {business.name}.
+            <br />
+            All rights reserved.
           </p>
         </div>
       </div>

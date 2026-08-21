@@ -124,8 +124,12 @@ export default function Contact() {
           </a>
 
           <dl className="mt-10 space-y-3.5 border-t border-rule pt-8 text-[17px] md:text-[18px]">
+            {/* On a phone the number and the service area sit directly under
+                a WhatsApp button and a sticky WhatsApp bar that already say
+                the same thing, so both rows wait for a wider screen. The
+                email addresses stay: nothing else on the page carries them. */}
             {hasPhone && (
-              <div className="flex items-center gap-3">
+              <div className="hidden items-center gap-3 sm:flex">
                 <dt className="sr-only">Phone</dt>
                 <Phone className="h-[19px] w-[19px] shrink-0 text-red" />
                 <dd>
@@ -151,7 +155,7 @@ export default function Contact() {
                 </dd>
               </div>
             )}
-            <div>
+            <div className="hidden sm:block">
               <dt className="sr-only">Service area</dt>
               <dd className="text-inkSoft">Serving businesses across Delhi &amp; Gurugram.</dd>
             </div>

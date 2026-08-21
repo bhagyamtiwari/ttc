@@ -30,7 +30,7 @@ export default function About() {
               Who we supply
             </h3>
             <p className="mt-3 max-w-[36rem] text-[18px] leading-[1.7] text-inkSoft md:text-[19px]">
-              {servedSegments.join(' · ')}
+              {servedSegments.join(' · ')} &amp; more
             </p>
           </div>
         </Rise>

@@ -248,8 +248,9 @@ export const brands: string[] = [
 
 /* Who the business serves. Shown in the About section. */
 export const servedSegments: string[] = [
-  'Corporate offices', 'Startups', 'SMEs', 'Coworking spaces', 'Hotels',
-  'Restaurants', 'Cafés', 'Institutions', 'Facility management companies',
+  'Multinational company (MNC) & corporate offices', 'Startups', 'SMEs',
+  'Coworking spaces', 'Hotels', 'Restaurants', 'Cafés', 'Institutions',
+  'Facility management companies',
 ]
 
 export const navLinks = [
