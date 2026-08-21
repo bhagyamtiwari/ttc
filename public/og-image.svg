@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#FBF9F6"/>
+  <rect x="72" y="72" width="76" height="76" rx="6" fill="#A32B22"/>
+  <text x="110" y="122" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="28" font-weight="700" fill="#ffffff">TTC</text>
+  <text x="172" y="112" font-family="Inter, Helvetica, Arial, sans-serif" font-size="27"
+        font-weight="600" fill="#181512">Tiwari Trading Company</text>
+  <text x="172" y="140" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16"
+        font-weight="600" letter-spacing="2" fill="#5F5851">DELHI NCR</text>
+  <text x="72" y="300" font-family="Inter, Helvetica, Arial, sans-serif" font-size="72"
+        font-weight="700" fill="#181512">Everything Your</text>
+  <text x="72" y="382" font-family="Inter, Helvetica, Arial, sans-serif" font-size="72"
+        font-weight="700" fill="#181512">Workplace Needs.</text>
+  <text x="72" y="452" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26"
+        fill="#5F5851">Pantry, FMCG, cleaning and workplace supplies for businesses</text>
+  <text x="72" y="490" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26"
+        fill="#5F5851">across Delhi and Gurugram.</text>
+  <rect x="72" y="536" width="4" height="34" fill="#A32B22"/>
+  <text x="96" y="562" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22"
+        font-weight="600" fill="#181512">tiwaritradingcompany.com</text>
+</svg>
