@@ -1,15 +1,8 @@
 import Frame from './Frame'
 import Rise from './Rise'
-import { hasOwnImage } from '../data/images'
 import { servedSegments } from '../data/site'
 
 export default function About() {
-  /* On a phone the picture column sits below the text, so while it is still
-     a holding plate it is 280px of dead space directly under "Who we supply".
-     At lg the column is beside the text and has to hold the grid open, so
-     the plate stays there until a photograph arrives. */
-  const hasPhoto = hasOwnImage('warehouse')
-
   return (
     <section id="about" className="border-b border-rule bg-paperDeep">
       <div className="lg:grid lg:grid-cols-[minmax(0,52fr)_minmax(0,48fr)] lg:items-stretch">
@@ -42,13 +35,7 @@ export default function About() {
           </div>
         </Rise>
 
-        <Rise
-          settle
-          delay={80}
-          className={`relative min-h-[280px] sm:min-h-[360px] lg:min-h-full ${
-            hasPhoto ? '' : 'hidden lg:block'
-          }`}
-        >
+        <Rise settle delay={80} className="relative min-h-[280px] sm:min-h-[360px] lg:min-h-full">
           <Frame
             folder="warehouse"
             alt="Cartons and stock of pantry, cleaning and office supplies held by Tiwari Trading Company"

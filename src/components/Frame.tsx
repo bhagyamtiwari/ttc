@@ -1,4 +1,4 @@
-import { imageFor } from '../data/images'
+import { hasOwnImage, imageFor } from '../data/images'
 
 type Tone = 'warm' | 'dark' | 'red'
 
@@ -45,10 +45,10 @@ const tones: Record<Tone, { bg: string; type: string; stencil: string }> = {
 /**
  * The single image primitive for the whole site.
  *
- * Renders the photograph when one exists in the folder, and an "Image TBD"
- * plate when it does not, so a card never shows a picture of something it is
- * not about. No rounded corners and no borders: photographs sit directly in
- * the layout.
+ * Renders the photograph when one exists in the folder. Until then it shows a
+ * borrowed one with an "Image TBD" badge stamped over it, so the layout is
+ * never blank and nobody mistakes the stand-in for the real thing. No rounded
+ * corners and no borders: photographs sit directly in the layout.
  */
 export default function Frame({
   folder,
@@ -64,21 +64,46 @@ export default function Frame({
 }: Props) {
   const src = imageFor(folder, index)
   const t = tones[tone]
+  /* True while this section is showing somebody else's photograph. */
+  const isStandIn = Boolean(src) && !hasOwnImage(folder)
+
+  /* A borrowed photograph must not be described as though it shows this
+     category. Once the folder has its own photo, the specific alt returns. */
+  const description = isStandIn
+    ? 'A selection of the branded pantry, food, beverage, cleaning and paper products supplied by Tiwari Trading Company'
+    : alt
 
   return (
     <div className={`relative overflow-hidden ${ratio ?? ''} ${src ? '' : t.bg} ${className}`}>
       {src ? (
-        <img
-          src={src}
-          alt={alt}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding={priority ? 'sync' : 'async'}
-          // @ts-expect-error fetchpriority is valid HTML, not yet in React's types
-          fetchpriority={priority ? 'high' : undefined}
-          className={`${imgClassName ?? 'h-full w-full object-cover'} ${
-            hover ? 'transition-transform duration-[900ms] ease-out hover:scale-[1.03]' : ''
-          }`}
-        />
+        <>
+          <img
+            src={src}
+            alt={description}
+            loading={priority ? 'eager' : 'lazy'}
+            decoding={priority ? 'sync' : 'async'}
+            // @ts-expect-error fetchpriority is valid HTML, not yet in React's types
+            fetchpriority={priority ? 'high' : undefined}
+            className={`${imgClassName ?? 'h-full w-full object-cover'} ${
+              hover ? 'transition-transform duration-[900ms] ease-out hover:scale-[1.03]' : ''
+            }`}
+          />
+
+          {isStandIn && (
+            <span className="pointer-events-none absolute inset-0 flex items-start justify-center bg-ink/25 p-2">
+              <span className="rounded-[3px] bg-ink/80 px-2 py-1 text-center leading-tight text-paper backdrop-blur-[2px] sm:px-2.5 sm:py-1.5">
+                <span className="block text-[9.5px] font-bold uppercase tracking-[0.12em] sm:text-[10.5px] sm:tracking-[0.14em]">
+                  Image TBD
+                </span>
+                {/* The reassurance only fits once the card is wider than a
+                    half-width phone slot. */}
+                <span className="mt-0.5 hidden text-[10.5px] font-medium sm:block">
+                  (will be updated soon)
+                </span>
+              </span>
+            </span>
+          )}
+        </>
       ) : (
         <div
           className={`absolute inset-0 flex flex-col gap-3 overflow-hidden p-4 md:p-5 ${
