@@ -123,13 +123,12 @@ export default function Contact() {
             WhatsApp Us
           </a>
 
-          <dl className="mt-10 space-y-3.5 border-t border-rule pt-8 text-[17px] md:text-[18px]">
-            {/* On a phone the number and the service area sit directly under
-                a WhatsApp button and a sticky WhatsApp bar that already say
-                the same thing, so both rows wait for a wider screen. The
-                email addresses stay: nothing else on the page carries them. */}
+          {/* The whole list waits for a wider screen. On a phone it sits
+              directly under a WhatsApp button that already gets the reader to
+              us, and the footer carries the same number and addresses. */}
+          <dl className="mt-10 hidden space-y-3.5 border-t border-rule pt-8 text-[17px] sm:block md:text-[18px]">
             {hasPhone && (
-              <div className="hidden items-center gap-3 sm:flex">
+              <div className="flex items-center gap-3">
                 <dt className="sr-only">Phone</dt>
                 <Phone className="h-[19px] w-[19px] shrink-0 text-red" />
                 <dd>
@@ -155,7 +154,7 @@ export default function Contact() {
                 </dd>
               </div>
             )}
-            <div className="hidden sm:block">
+            <div>
               <dt className="sr-only">Service area</dt>
               <dd className="text-inkSoft">Serving businesses across Delhi &amp; Gurugram.</dd>
             </div>
