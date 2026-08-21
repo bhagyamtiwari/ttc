@@ -56,21 +56,6 @@ export default function Footer() {
           <p className="text-[15px] text-inkSoft">
             &copy; 2026 {business.name}. All rights reserved.
           </p>
-          <p className="mt-2 text-[13px] text-inkSoft/70">
-            Built by{' '}
-            {/* Deliberately unstyled: it carries the surrounding colour and no
-                underline, so the credit reads as a line of text. The focus ring
-                still appears for anyone tabbing through. */}
-            <a
-              href="https://zindent.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-inherit no-underline"
-            >
-              zindent
-            </a>
-            , an ADNIZ Private Limited project
-          </p>
         </div>
       </div>
     </footer>

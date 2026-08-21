@@ -4,10 +4,10 @@ import { Arrow, WhatsAppMark } from './Icons'
 import { waLinkProps, whatsappHref } from '../data/site'
 
 /**
- * The one coloured band on the page. Text on the left, the product lineup on
- * the right running to the edge of the screen. Everything else on the site is
- * white, so this band does the whole job of announcing the brand and the
- * rest of the page can stay quiet and functional.
+ * The one coloured band at the top of the page. Text on the left, the product
+ * lineup on the right running to the edge of the screen. Every word on the red
+ * is pure white: on this ground a dimmed white reads as grey rather than as a
+ * softer white.
  */
 export default function Hero() {
   return (
@@ -15,21 +15,16 @@ export default function Hero() {
       <div className="lg:grid lg:min-h-[460px] lg:grid-cols-[minmax(0,46fr)_minmax(0,54fr)] lg:items-stretch xl:min-h-[500px]">
         <Rise className="pad-left flex items-center py-11 pr-6 sm:py-14 md:py-16 md:pr-10 lg:py-16 lg:pr-14">
           <div className="max-w-[34rem]">
-            <p className="text-[11.5px] font-bold uppercase tracking-[0.16em] text-paper/75 sm:text-[13px]">
-              B2B Pantry &amp; Workplace Supplies
-            </p>
-
-            {/* Two-tone, not two colours: the setup line sits back and the
-                promise lands in solid white. Nothing here reads as a link. */}
-            <h1 className="display mt-4 sm:mt-5 text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.5rem,3.6vw,3.5rem)]">
-              <span className="text-paper/70">Everything your</span>
+            <h1 className="display text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.5rem,3.6vw,3.5rem)]">
+              Everything your
               <br />
-              Workplace needs.
+              workplace needs.
             </h1>
 
-            <p className="mt-5 max-w-[32rem] text-[17px] leading-[1.5] text-paper/85 sm:mt-6 sm:text-[19px] sm:leading-[1.55] md:text-[20px]">
+            <p className="mt-5 max-w-[33rem] text-[17px] leading-[1.5] text-paper sm:mt-6 sm:text-[19px] sm:leading-[1.55] md:text-[20px]">
               Reliable B2B supplies for offices, factories, institutions and workplaces across
-              Delhi NCR. Branded, consistent, and sourced to your requirements.
+              Delhi-NCR. Branded, consistent, and sourced to your requirements &mdash; including
+              imported and specialty products.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
@@ -58,7 +53,7 @@ export default function Hero() {
             folder="hero"
             priority
             tone="red"
-            alt="A lineup of the pantry, household, tea, cleaning and personal care products Tiwari Trading Company supplies to businesses across Delhi NCR, including Tata Tea, Brooke Bond Red Label, Surf Excel, Harpic, Dettol, Tata Salt and Saffola"
+            alt="A lineup of the pantry, household, tea, cleaning and personal care products Tiwari Trading Company supplies to businesses across Delhi-NCR, including Tata Tea, Brooke Bond Red Label, Surf Excel, Harpic, Dettol, Tata Salt and Saffola"
             className="h-full w-full"
             imgClassName="h-full w-full object-cover object-[62%_50%]"
           />

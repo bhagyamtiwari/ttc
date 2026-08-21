@@ -66,8 +66,8 @@ export default function ProductGrid() {
           <span aria-hidden="true" className="rule-red mt-5 block h-[4px] w-14 rounded-full bg-red" />
           <p className="lede mt-5 max-w-[46rem]">
             From everyday pantry essentials to cleaning and office consumables, we supply the
-            products businesses go through week after week. These are examples of our range, not
-            the whole of it.
+            products businesses go through week after week &mdash; imported and specialty lines
+            included. These are examples of our range, not the whole of it.
           </p>
         </Rise>
 

@@ -216,7 +216,7 @@ export const valuePoints: Point[] = [
   { icon: 'badge', title: 'Branded Products', copy: 'Trusted FMCG and workplace brands.' },
   { icon: 'boxes', title: 'Wide Range', copy: 'From pantry staples to cleaning and office essentials.' },
   { icon: 'search', title: 'Custom Sourcing', copy: 'Need something specific? We will source it.' },
-  { icon: 'pin', title: 'Delhi NCR Supply', copy: 'Serving businesses across Delhi and Gurugram.' },
+  { icon: 'pin', title: 'Delhi-NCR Supply', copy: 'Serving businesses across Delhi and Gurugram.' },
 ]
 
 export const servicePoints: Point[] = [

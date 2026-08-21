@@ -15,7 +15,7 @@ export default function About() {
 
             <div className="mt-6 space-y-5 text-[18px] leading-[1.6] text-inkSoft md:mt-7 md:text-[19px]">
               <p>
-                Tiwari Trading Company is a Delhi NCR-based trading and supply company helping
+                Tiwari Trading Company is a Delhi-NCR-based trading and supply company helping
                 businesses source the pantry, beverage, food, cleaning and workplace consumables
                 they need.
               </p>

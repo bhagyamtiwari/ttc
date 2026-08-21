@@ -11,7 +11,7 @@ export default function SourcingBand() {
           <h2 className="display text-[clamp(2rem,7vw,2.7rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             Looking for something specific?
           </h2>
-          <p className="mt-5 text-[18px] leading-[1.55] text-paper/85 md:text-[19px]">
+          <p className="mt-5 text-[18px] leading-[1.55] text-paper md:text-[19px]">
             Our range goes beyond what is shown here. From a particular FMCG brand to imported
             products or everyday housekeeping supplies, tell us what you need and we will help
             source it.
