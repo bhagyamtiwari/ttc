@@ -23,7 +23,10 @@ export const business = {
                       Example for an Indian mobile: '919812345678'
      phoneDisplay   : how the number should read on screen.
      phoneDial      : what the "Call us" button dials.
-     email          : leave as an empty string ('') to hide the email row.
+     email          : the address shown first. Leave as an empty string ('')
+                      to hide the email rows entirely.
+     emailAlt       : a second address, shown under the first. Leave empty
+                      ('') to show only one.
 
      Any field left empty is hidden automatically, and the WhatsApp buttons
      fall back to the contact form until a number is added.
@@ -31,7 +34,8 @@ export const business = {
   whatsappNumber: '918130701521',
   phoneDisplay: '+91 81307 01521',
   phoneDial: '+918130701521',
-  email: '',          // e.g. 'sales@tiwaritradingcompany.com'
+  email: 'contact@tiwaritradingcompany.com',
+  emailAlt: 'tiwaritradingcompany@gmail.com',
 
   /* Pre-filled message that opens in WhatsApp when someone taps a CTA. */
   whatsappMessage:
@@ -60,17 +64,6 @@ export type Location = {
 
 export const locations: Location[] = [
   {
-    id: 'delhi',
-    city: 'Delhi',
-    address: [
-      'A1/116, near Shiv Durga Mandir',
-      'Phase 5, Aya Nagar Extension, Aya Nagar',
-      'New Delhi, Delhi 110047',
-    ],
-    mapsLink: 'https://www.google.com/maps/search/?api=1&query=28.473937%2C77.128755',
-    mapsEmbed: 'https://maps.google.com/maps?q=28.473937,77.128755&z=16&output=embed',
-  },
-  {
     id: 'gurugram',
     city: 'Gurugram',
     address: [
@@ -80,6 +73,17 @@ export const locations: Location[] = [
     ],
     mapsLink: 'https://www.google.com/maps/search/?api=1&query=28.466206%2C77.089936',
     mapsEmbed: 'https://maps.google.com/maps?q=28.466206,77.089936&z=16&output=embed',
+  },
+  {
+    id: 'delhi',
+    city: 'Delhi',
+    address: [
+      'A1/116, near Shiv Durga Mandir',
+      'Phase 5, Aya Nagar Extension, Aya Nagar',
+      'New Delhi, Delhi 110047',
+    ],
+    mapsLink: 'https://www.google.com/maps/search/?api=1&query=28.473937%2C77.128755',
+    mapsEmbed: 'https://maps.google.com/maps?q=28.473937,77.128755&z=16&output=embed',
   },
 ]
 

@@ -138,10 +138,16 @@ export default function Contact() {
             {business.email && (
               <div>
                 <dt className="sr-only">Email</dt>
-                <dd>
-                  <a href={`mailto:${business.email}`} className="font-bold text-ink transition-colors hover:text-red">
-                    {business.email}
-                  </a>
+                <dd className="space-y-1.5">
+                  {[business.email, business.emailAlt].filter(Boolean).map((address) => (
+                    <a
+                      key={address}
+                      href={`mailto:${address}`}
+                      className="block font-bold text-ink transition-colors hover:text-red"
+                    >
+                      {address}
+                    </a>
+                  ))}
                 </dd>
               </div>
             )}

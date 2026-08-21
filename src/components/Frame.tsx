@@ -1,4 +1,4 @@
-import { hasOwnImage, imageFor } from '../data/images'
+import { imageFor } from '../data/images'
 
 type Tone = 'warm' | 'dark' | 'red'
 
@@ -45,9 +45,10 @@ const tones: Record<Tone, { bg: string; type: string; stencil: string }> = {
 /**
  * The single image primitive for the whole site.
  *
- * Renders the photograph when one exists in the folder, and a typographic
- * holding plate when it does not, so layouts read as intentional either way.
- * No rounded corners and no borders: photographs sit directly in the layout.
+ * Renders the photograph when one exists in the folder, and an "Image TBD"
+ * plate when it does not, so a card never shows a picture of something it is
+ * not about. No rounded corners and no borders: photographs sit directly in
+ * the layout.
  */
 export default function Frame({
   folder,
@@ -64,19 +65,12 @@ export default function Frame({
   const src = imageFor(folder, index)
   const t = tones[tone]
 
-  /* A borrowed photograph must not be described as though it shows this
-     category. Once the folder has its own photo, the specific alt returns. */
-  const description = hasOwnImage(folder)
-    ? alt
-    : 'A selection of the branded pantry, food, beverage, cleaning and paper products supplied by Tiwari Trading Company'
-
-
   return (
     <div className={`relative overflow-hidden ${ratio ?? ''} ${src ? '' : t.bg} ${className}`}>
       {src ? (
         <img
           src={src}
-          alt={description}
+          alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           decoding={priority ? 'sync' : 'async'}
           // @ts-expect-error fetchpriority is valid HTML, not yet in React's types
@@ -91,8 +85,11 @@ export default function Frame({
             label ? 'justify-between' : 'items-center justify-center'
           }`}
         >
-          <span className={`text-[11px] font-semibold uppercase tracking-[0.2em] ${t.stencil}`}>
-            Photo to follow
+          <span className={`flex flex-col items-center gap-1 text-center ${t.stencil}`}>
+            <span className="text-[12px] font-bold uppercase tracking-[0.2em]">Image TBD</span>
+            <span className="text-[12px] font-semibold normal-case tracking-[0.01em]">
+              (will be updated soon)
+            </span>
           </span>
           {label && (
             <span

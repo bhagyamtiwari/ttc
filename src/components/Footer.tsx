@@ -37,6 +37,20 @@ export default function Footer() {
           </a>
         )}
 
+        {business.email && (
+          <div className="mt-4 flex flex-col items-center gap-1">
+            {[business.email, business.emailAlt].filter(Boolean).map((address) => (
+              <a
+                key={address}
+                href={`mailto:${address}`}
+                className="text-[16px] font-semibold text-inkSoft transition-colors hover:text-red md:text-[17px]"
+              >
+                {address}
+              </a>
+            ))}
+          </div>
+        )}
+
         <nav
           aria-label="Footer"
           className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-t border-rule pt-9"
