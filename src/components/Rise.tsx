@@ -6,7 +6,7 @@ type Props = {
   /** Adds the image-settle effect on top of the rise. */
   settle?: boolean
   delay?: number
-  as?: 'div' | 'section' | 'li' | 'article' | 'figure' | 'header'
+  as?: 'div' | 'section' | 'ul' | 'li' | 'article' | 'figure' | 'header'
 }
 
 /**

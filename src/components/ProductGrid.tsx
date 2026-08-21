@@ -9,7 +9,7 @@ function Card({ card, index }: { card: ProductCard; index: number }) {
       as="li"
       settle
       delay={(index % 4) * 70}
-      className="group overflow-hidden rounded-card border border-rule bg-paper shadow-[0_1px_2px_rgba(22,24,28,0.04)] transition-colors duration-200 hover:border-ink/25"
+      className="card-accent group overflow-hidden rounded-card border border-rule bg-paper shadow-[0_1px_2px_rgba(22,24,28,0.04)] hover:border-red/40"
     >
       <article className="flex h-full flex-col">
         {/* The photograph leads. Supplied shots are wide product lineups, so
@@ -23,19 +23,26 @@ function Card({ card, index }: { card: ProductCard; index: number }) {
           className="w-full"
         />
 
-        <div className="flex flex-1 flex-col p-5 md:p-6">
-          <h3 className="signage text-[18px] leading-[1.12] md:text-[19px]">{card.name}</h3>
+        <div className="flex flex-1 flex-col p-4 sm:p-5 md:p-6">
+          <h3 className="signage text-[15.5px] leading-[1.15] sm:text-[17px] md:text-[19px]">
+            {card.name}
+          </h3>
 
-          <p className="mt-2.5 text-[16px] leading-[1.45] text-inkSoft">
+          {/* On a phone the brand line is clamped to two lines, so two cards
+              sit side by side at a predictable height instead of one card
+              running the length of the screen. */}
+          <p className="mt-2 line-clamp-2 text-[13.5px] leading-[1.4] text-inkSoft sm:line-clamp-none sm:text-[15px] md:text-[16px]">
             {card.brands.join(', ')} &amp; more
           </p>
 
+          {/* A 44px tap target, so the link is comfortable to hit with a
+              thumb without opening a gap on desktop. */}
           <a
             href={whatsappHref(
               `Hello Tiwari Trading Company, I would like to enquire about ${card.name} for my workplace.`,
             )}
             {...waLinkProps}
-            className="mt-5 inline-flex items-center gap-2 self-start text-[16px] font-bold text-red"
+            className="mt-auto inline-flex min-h-[44px] items-center gap-2 self-start pt-3 text-[14.5px] font-bold text-red sm:text-[16px]"
           >
             Enquire
             <Arrow className="h-[15px] w-[15px] transition-transform duration-200 group-hover:translate-x-1" />
@@ -56,7 +63,7 @@ export default function ProductGrid() {
           </h2>
           {/* A short red rule under every section heading, so the eye picks
               out where each part of the page begins. */}
-          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
+          <span aria-hidden="true" className="rule-red mt-5 block h-[4px] w-14 rounded-full bg-red" />
           <p className="lede mt-5 max-w-[46rem]">
             From everyday pantry essentials to cleaning and office consumables, we supply the
             products businesses go through week after week. These are examples of our range, not
@@ -64,7 +71,7 @@ export default function ProductGrid() {
           </p>
         </Rise>
 
-        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-12 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 md:mt-12 md:grid-cols-3 xl:grid-cols-4">
           {productCards.map((card, i) => (
             <Card key={card.id} card={card} index={i} />
           ))}

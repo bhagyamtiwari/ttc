@@ -16,7 +16,7 @@ export default function Locations() {
           <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             Serving Delhi NCR
           </h2>
-          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
+          <span aria-hidden="true" className="rule-red mt-5 block h-[4px] w-14 rounded-full bg-red" />
           <p className="lede mt-5">
             Two bases, serving businesses across Delhi and Gurugram. Delhi NCR delivery available
             based on requirement.

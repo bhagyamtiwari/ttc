@@ -13,26 +13,26 @@ export default function Hero() {
   return (
     <section id="top" className="bg-red pt-[72px] text-paper md:pt-[84px]">
       <div className="lg:grid lg:min-h-[460px] lg:grid-cols-[minmax(0,46fr)_minmax(0,54fr)] lg:items-stretch xl:min-h-[500px]">
-        <Rise className="pad-left flex items-center py-14 pr-6 md:py-16 md:pr-10 lg:py-16 lg:pr-14">
+        <Rise className="pad-left flex items-center py-11 pr-6 sm:py-14 md:py-16 md:pr-10 lg:py-16 lg:pr-14">
           <div className="max-w-[34rem]">
-            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-paper/75">
+            <p className="text-[11.5px] font-bold uppercase tracking-[0.16em] text-paper/75 sm:text-[13px]">
               B2B Pantry &amp; Workplace Supplies
             </p>
 
             {/* Two-tone, not two colours: the setup line sits back and the
                 promise lands in solid white. Nothing here reads as a link. */}
-            <h1 className="display mt-5 text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.5rem,3.6vw,3.5rem)]">
+            <h1 className="display mt-4 sm:mt-5 text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.5rem,3.6vw,3.5rem)]">
               <span className="text-paper/70">Everything your</span>
               <br />
               Workplace needs.
             </h1>
 
-            <p className="mt-7 max-w-[32rem] text-[19px] leading-[1.55] text-paper/85 md:text-[20px]">
+            <p className="mt-5 max-w-[32rem] text-[17px] leading-[1.5] text-paper/85 sm:mt-6 sm:text-[19px] sm:leading-[1.55] md:text-[20px]">
               Reliable B2B supplies for offices, factories, institutions and workplaces across
               Delhi NCR. Branded, consistent, and sourced to your requirements.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:gap-4">
               <a
                 href={whatsappHref()}
                 {...waLinkProps}
@@ -53,7 +53,7 @@ export default function Hero() {
         </Rise>
 
         {/* The lineup, running to the right edge of the screen. */}
-        <Rise settle className="relative aspect-[2/1] w-full sm:aspect-[21/9] lg:aspect-auto lg:min-h-full">
+        <Rise settle className="relative aspect-[16/7] w-full sm:aspect-[21/9] lg:aspect-auto lg:min-h-full">
           <Frame
             folder="hero"
             priority

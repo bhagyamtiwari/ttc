@@ -43,8 +43,10 @@
     @apply font-sans font-extrabold leading-[0.92] tracking-tightest;
   }
 
+  /* Steps down on a phone: at 19px the intro paragraphs ran to six lines
+     before the reader reached anything they could act on. */
   .lede {
-    @apply text-[19px] leading-[1.55] text-ink/80 md:text-[20px];
+    @apply text-[17px] leading-[1.5] text-ink/80 sm:text-[19px] sm:leading-[1.55] md:text-[20px];
   }
 
   /* A category or place name. Bold and tight, but sentence case: caps on
@@ -103,16 +105,99 @@
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .rise, .settle img {
+  .rule-red { transform: none !important; }
+  .rise, .settle img, .stagger > * {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
+  .card-accent:hover { transform: none !important; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* --- Staggered reveal ---------------------------------------------------
+   A long list of names arriving all at once reads as a block. Inside a
+   .stagger, each child fades up a beat after the one before it, capped so
+   the tail of a fifty-name list is not still animating a second later.
+   Reduced motion switches the whole thing off below.                     */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.stagger.shown > * {
+  animation: stagger-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 18ms);
+}
+
+@keyframes stagger-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The short red rule under every section heading draws itself in as the
+   heading arrives, which ties the sections together with one gesture. */
+.rule-red {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) 0.12s;
+}
+.rise.shown .rule-red { transform: scaleX(1); }
+
+/* A brand name, with a red rule that wipes in from the left on hover. On a
+   touch screen there is no hover, so the names simply sit there and the
+   staggered arrival does the work instead. */
+.brand-name {
+  position: relative;
+  display: inline-block;
+  transition: color 0.18s ease;
+}
+.brand-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: theme('colors.red.DEFAULT');
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+@media (hover: hover) {
+  .brand-name:hover { color: theme('colors.red.DEFAULT'); }
+  .brand-name:hover::after { transform: scaleX(1); }
+}
+
+/* A card that answers to the pointer: the red rule across its top wipes in,
+   and the whole card lifts a hair. Both are suppressed on touch, where a
+   card that moves under the thumb just feels unstable. */
+.card-accent { position: relative; }
+.card-accent::before {
+  content: '';
+  position: absolute;
+  inset: -1px -1px auto -1px;
+  height: 3px;
+  background: theme('colors.red.DEFAULT');
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s cubic-bezier(0.22, 0.61, 0.36, 1);
+  z-index: 1;
+}
+@media (hover: hover) {
+  .card-accent { transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1), border-color 0.2s ease; }
+  .card-accent:hover { transform: translateY(-3px); }
+  .card-accent:hover::before,
+  .card-accent:focus-within::before { transform: scaleX(1); }
+}
+/* Keyboard users get the accent whatever the input type. */
+.card-accent:focus-within::before { transform: scaleX(1); }
 
 /* Horizontal image strips scroll on touch without a visible scrollbar. */
 .rail {
