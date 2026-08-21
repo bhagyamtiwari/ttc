@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Footer">
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-paper/40">
+            <h2 className="text-[17px] font-semibold tracking-tighter text-paper">
               Quick links
             </h2>
             <ul className="mt-5 space-y-3">
@@ -28,7 +28,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-paper/40">
+            <h2 className="text-[17px] font-semibold tracking-tighter text-paper">
               Locations
             </h2>
             <ul className="mt-5 space-y-3">
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-paper/40">
+            <h2 className="text-[17px] font-semibold tracking-tighter text-paper">
               Get in touch
             </h2>
             <a
@@ -66,8 +66,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-paper/10 pt-6 text-[15px] text-paper/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2026 {business.name}. All rights reserved.</p>
-          <p>{business.domain}</p>
+          <p className="sm:whitespace-nowrap">&copy; 2026 {business.name}. All rights reserved.</p>
+          <p className="sm:ml-auto">{business.domain}</p>
+          <p className="text-[13px] text-paper/35 sm:w-full sm:text-right">
+            Website built by Zindent, an ADNIZ Private Limited project.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import { imageFor } from '../data/images'
+import { hasOwnImage, imageFor } from '../data/images'
 
 type Tone = 'warm' | 'dark' | 'red'
 
@@ -64,12 +64,19 @@ export default function Frame({
   const src = imageFor(folder, index)
   const t = tones[tone]
 
+  /* A borrowed photograph must not be described as though it shows this
+     category. Once the folder has its own photo, the specific alt returns. */
+  const description = hasOwnImage(folder)
+    ? alt
+    : 'A selection of the branded pantry, food, beverage, cleaning and paper products supplied by Tiwari Trading Company'
+
+
   return (
     <div className={`relative overflow-hidden ${ratio ?? ''} ${src ? '' : t.bg} ${className}`}>
       {src ? (
         <img
           src={src}
-          alt={alt}
+          alt={description}
           loading={priority ? 'eager' : 'lazy'}
           decoding={priority ? 'sync' : 'async'}
           // @ts-expect-error fetchpriority is valid HTML, not yet in React's types

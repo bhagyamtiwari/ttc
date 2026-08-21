@@ -5,7 +5,7 @@ import { business, hasPhone, hasWhatsapp, waLinkProps, whatsappHref } from '../d
 
 const field =
   'w-full border border-paper/25 bg-transparent px-4 py-3.5 text-[17px] text-paper placeholder:text-paper/35 focus:border-paper/60 focus:outline-none'
-const label = 'block text-[14px] font-semibold uppercase tracking-[0.1em] text-paper/55'
+const label = 'block text-[16px] font-medium text-paper/70'
 
 /**
  * No backend. The form composes a WhatsApp message from the fields, unless an
