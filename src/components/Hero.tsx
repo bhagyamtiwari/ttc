@@ -4,40 +4,46 @@ import { Arrow, WhatsAppMark } from './Icons'
 import { waLinkProps, whatsappHref } from '../data/site'
 
 /**
- * Text on the left, the product lineup on the right running to the edge of
- * the screen. The photograph is a wide lineup (roughly 2.5:1), so the picture
- * column is kept short and wide and crops very little of it.
+ * The one coloured band on the page. Text on the left, the product lineup on
+ * the right running to the edge of the screen. Everything else on the site is
+ * white, so this band does the whole job of announcing the brand and the
+ * rest of the page can stay quiet and functional.
  */
 export default function Hero() {
   return (
-    <section id="top" className="border-b border-rule">
-      <div className="lg:grid lg:min-h-[430px] lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-stretch xl:min-h-[470px]">
-        <Rise className="pad-left flex items-center py-12 pr-6 md:py-14 md:pr-10 lg:py-14 lg:pr-12">
+    <section id="top" className="bg-red pt-[72px] text-paper md:pt-[84px]">
+      <div className="lg:grid lg:min-h-[460px] lg:grid-cols-[minmax(0,46fr)_minmax(0,54fr)] lg:items-stretch xl:min-h-[500px]">
+        <Rise className="pad-left flex items-center py-14 pr-6 md:py-16 md:pr-10 lg:py-16 lg:pr-14">
           <div className="max-w-[34rem]">
-            <h1 className="display text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.4rem,3.5vw,3.4rem)]">
-              Everything your
-              <br />
-              <span className="text-red">Workplace needs.</span>
-            </h1>
-
-            <p className="lede mt-6 max-w-[32rem]">
-              Tiwari Trading Company supplies pantry essentials, beverages, snacks, cleaning
-              supplies, office consumables and more to businesses across Delhi NCR. Branded,
-              reliable, and sourced to your requirements.
+            <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-paper/75">
+              B2B Pantry &amp; Workplace Supplies
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:flex-col lg:items-start lg:gap-3 xl:flex-row xl:gap-4">
+            {/* Two-tone, not two colours: the setup line sits back and the
+                promise lands in solid white. Nothing here reads as a link. */}
+            <h1 className="display mt-5 text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.5rem,3.6vw,3.5rem)]">
+              <span className="text-paper/70">Everything your</span>
+              <br />
+              Workplace needs.
+            </h1>
+
+            <p className="mt-7 max-w-[32rem] text-[19px] leading-[1.55] text-paper/85 md:text-[20px]">
+              Reliable B2B supplies for offices, factories, institutions and workplaces across
+              Delhi NCR. Branded, consistent, and sourced to your requirements.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <a
                 href={whatsappHref()}
                 {...waLinkProps}
-                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card bg-red px-7 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep lg:px-6"
+                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card bg-paper px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-red-tint lg:px-6"
               >
                 <WhatsAppMark />
                 WhatsApp Us
               </a>
               <a
                 href="#products"
-                className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card border border-red px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-red hover:text-paper lg:px-6"
+                className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card border border-paper/70 px-7 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-paper hover:text-red lg:px-6"
               >
                 Explore Products
                 <Arrow className="h-[16px] w-[16px] transition-transform duration-200 group-hover:translate-x-1" />
@@ -51,6 +57,7 @@ export default function Hero() {
           <Frame
             folder="hero"
             priority
+            tone="red"
             alt="A lineup of the pantry, household, tea, cleaning and personal care products Tiwari Trading Company supplies to businesses across Delhi NCR, including Tata Tea, Brooke Bond Red Label, Surf Excel, Harpic, Dettol, Tata Salt and Saffola"
             className="h-full w-full"
             imgClassName="h-full w-full object-cover object-[62%_50%]"

@@ -11,6 +11,7 @@ export default function About() {
             <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.3rem)]">
               Your everyday business supply partner
             </h2>
+            <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
 
             <div className="mt-6 space-y-5 text-[18px] leading-[1.6] text-inkSoft md:mt-7 md:text-[19px]">
               <p>

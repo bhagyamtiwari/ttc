@@ -8,12 +8,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section aria-labelledby="how" className="border-b border-rule py-16 md:py-20">
+    <section aria-labelledby="how" className="border-b border-rule py-16 md:py-20 lg:py-24">
       <div className="shell">
         <Rise>
           <h2 id="how" className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             How it works
           </h2>
+          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
         </Rise>
 
         <ol className="mt-10 grid gap-9 md:mt-14 md:grid-cols-3 md:gap-8 lg:gap-12">

@@ -8,7 +8,7 @@ function Card({ card, index }: { card: ProductCard; index: number }) {
     <Rise
       as="li"
       settle
-      delay={(index % 3) * 70}
+      delay={(index % 4) * 70}
       className="group overflow-hidden rounded-card border border-rule bg-paper shadow-[0_1px_2px_rgba(22,24,28,0.04)] transition-colors duration-200 hover:border-ink/25"
     >
       <article className="flex h-full flex-col">
@@ -54,6 +54,9 @@ export default function ProductGrid() {
           <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.6rem,4.4vw,3.5rem)]">
             What we supply
           </h2>
+          {/* A short red rule under every section heading, so the eye picks
+              out where each part of the page begins. */}
+          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
           <p className="lede mt-5 max-w-[46rem]">
             From everyday pantry essentials to cleaning and office consumables, we supply the
             products businesses go through week after week. These are examples of our range, not
@@ -61,7 +64,7 @@ export default function ProductGrid() {
           </p>
         </Rise>
 
-        <ul className="mt-10 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 md:gap-5 2xl:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-12 lg:grid-cols-3 xl:grid-cols-4">
           {productCards.map((card, i) => (
             <Card key={card.id} card={card} index={i} />
           ))}

@@ -13,6 +13,7 @@ export default function Brands() {
           <h2 id="brands" className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             Brands we supply
           </h2>
+          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-red" />
           <p className="lede mt-5">
             A selection of the pantry, food, beverage, cleaning and paper brands we regularly
             supply to offices and businesses across Delhi and Gurugram.

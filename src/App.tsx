@@ -17,8 +17,8 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <UtilityStrip />
         <Hero />
+        <UtilityStrip />
         <ProductGrid />
         <ServiceStrip />
         <SourcingBand />

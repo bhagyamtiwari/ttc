@@ -108,6 +108,7 @@ export default function Contact() {
           <h2 className="display text-[clamp(2.2rem,8vw,3rem)] md:text-[clamp(2.6rem,4.6vw,3.6rem)]">
             Let&rsquo;s talk about what you need.
           </h2>
+          <span aria-hidden="true" className="mt-5 block h-[4px] w-14 rounded-full bg-paper" />
           <p className="mt-6 max-w-[36rem] text-[18px] leading-[1.6] text-paper/70 md:text-[19px]">
             Send us your requirement and we will take it from there. Whether it is a regular
             office pantry supply, a bulk order, or something specific you cannot find.
