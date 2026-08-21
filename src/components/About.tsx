@@ -8,7 +8,7 @@ export default function About() {
       <div className="lg:grid lg:grid-cols-[minmax(0,52fr)_minmax(0,48fr)] lg:items-stretch">
         <Rise className="pad-left flex items-center py-16 pr-6 md:py-20 md:pr-10 lg:pr-16">
           <div className="max-w-[38rem]">
-            <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] uppercase md:text-[clamp(2.4rem,4.2vw,3.3rem)]">
+            <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.3rem)]">
               Your everyday business supply partner
             </h2>
 

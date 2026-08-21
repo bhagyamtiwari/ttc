@@ -37,7 +37,7 @@ type Props = {
 }
 
 const tones: Record<Tone, { bg: string; type: string; stencil: string }> = {
-  warm: { bg: 'bg-[#E7DFD2]', type: 'text-ink/25', stencil: 'text-ink/40' },
+  warm: { bg: 'bg-[#EAE8E4]', type: 'text-ink/25', stencil: 'text-ink/45' },
   dark: { bg: 'bg-ink', type: 'text-paper/25', stencil: 'text-paper/40' },
   red: { bg: 'bg-red', type: 'text-paper/30', stencil: 'text-paper/50' },
 }

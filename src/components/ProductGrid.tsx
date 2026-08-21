@@ -9,7 +9,7 @@ function Card({ card, index }: { card: ProductCard; index: number }) {
       as="li"
       settle
       delay={(index % 3) * 70}
-      className="group border border-rule bg-white transition-colors duration-200 hover:border-ink/25"
+      className="group overflow-hidden rounded-card border border-rule bg-paper shadow-[0_1px_2px_rgba(22,24,28,0.04)] transition-colors duration-200 hover:border-ink/25"
     >
       <article className="flex h-full flex-col">
         {/* The photograph leads. Supplied shots are wide product lineups, so
@@ -51,7 +51,7 @@ export default function ProductGrid() {
     <section id="products" className="border-b border-rule py-16 md:py-20 lg:py-24">
       <div className="shell">
         <Rise className="max-w-[52rem]">
-          <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] uppercase md:text-[clamp(2.6rem,4.4vw,3.5rem)]">
+          <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.6rem,4.4vw,3.5rem)]">
             What we supply
           </h2>
           <p className="lede mt-5 max-w-[46rem]">

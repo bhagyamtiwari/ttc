@@ -21,7 +21,7 @@ export default function Footer() {
         <a
           href={whatsappHref()}
           {...waLinkProps}
-          className="mt-8 inline-flex items-center justify-center gap-2.5 bg-red px-8 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep"
+          className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-card bg-red px-8 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep"
         >
           <WhatsAppMark />
           WhatsApp us

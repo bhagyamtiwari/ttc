@@ -105,7 +105,7 @@ export default function Contact() {
     <section id="contact" className="bg-ink text-paper">
       <div className="shell grid gap-12 py-16 md:py-20 lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] lg:gap-16 lg:py-24">
         <Rise>
-          <h2 className="display text-[clamp(2.2rem,8vw,3rem)] uppercase md:text-[clamp(2.6rem,4.6vw,3.6rem)]">
+          <h2 className="display text-[clamp(2.2rem,8vw,3rem)] md:text-[clamp(2.6rem,4.6vw,3.6rem)]">
             Let&rsquo;s talk about what you need.
           </h2>
           <p className="mt-6 max-w-[36rem] text-[18px] leading-[1.6] text-paper/70 md:text-[19px]">
@@ -116,7 +116,7 @@ export default function Contact() {
           <a
             href={whatsappHref()}
             {...waLinkProps}
-            className="mt-9 inline-flex w-full items-center justify-center gap-3 bg-red px-8 py-5 text-[19px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep sm:w-auto"
+            className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-card bg-red px-8 py-5 text-[19px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep sm:w-auto"
           >
             <WhatsAppMark className="h-[21px] w-[21px]" />
             WhatsApp Us

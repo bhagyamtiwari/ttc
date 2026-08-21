@@ -10,14 +10,14 @@ import { waLinkProps, whatsappHref } from '../data/site'
  */
 export default function Hero() {
   return (
-    <section id="top" className="border-b border-rule pt-[72px] md:pt-[84px]">
+    <section id="top" className="border-b border-rule">
       <div className="lg:grid lg:min-h-[430px] lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:items-stretch xl:min-h-[470px]">
         <Rise className="pad-left flex items-center py-12 pr-6 md:py-14 md:pr-10 lg:py-14 lg:pr-12">
           <div className="max-w-[34rem]">
-            <h1 className="display text-[clamp(2.3rem,9.5vw,3.3rem)] uppercase md:text-[clamp(2.8rem,6.2vw,4.4rem)] lg:text-[clamp(2.1rem,3.15vw,3rem)]">
+            <h1 className="display text-[clamp(2.4rem,9vw,3.4rem)] md:text-[clamp(3rem,5.4vw,4.2rem)] lg:text-[clamp(2.4rem,3.5vw,3.4rem)]">
               Everything your
               <br />
-              <span className="text-red">Workplace</span> needs.
+              <span className="text-red">Workplace needs.</span>
             </h1>
 
             <p className="lede mt-6 max-w-[32rem]">
@@ -30,14 +30,14 @@ export default function Hero() {
               <a
                 href={whatsappHref()}
                 {...waLinkProps}
-                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap bg-red px-7 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep lg:px-6"
+                className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card bg-red px-7 py-4 text-[17px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep lg:px-6"
               >
                 <WhatsAppMark />
                 WhatsApp Us
               </a>
               <a
                 href="#products"
-                className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap border border-red px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-red hover:text-paper lg:px-6"
+                className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-card border border-red px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-red hover:text-paper lg:px-6"
               >
                 Explore Products
                 <Arrow className="h-[16px] w-[16px] transition-transform duration-200 group-hover:translate-x-1" />

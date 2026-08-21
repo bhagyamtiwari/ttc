@@ -9,7 +9,7 @@ import Navbar from './components/Navbar'
 import ProductGrid from './components/ProductGrid'
 import ServiceStrip from './components/ServiceStrip'
 import SourcingBand from './components/SourcingBand'
-import StatementStrip from './components/StatementStrip'
+import UtilityStrip from './components/UtilityStrip'
 import WhatsAppButton from './components/WhatsAppButton'
 
 export default function App() {
@@ -17,8 +17,8 @@ export default function App() {
     <>
       <Navbar />
       <main>
+        <UtilityStrip />
         <Hero />
-        <StatementStrip />
         <ProductGrid />
         <ServiceStrip />
         <SourcingBand />

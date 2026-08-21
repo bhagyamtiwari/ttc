@@ -4,16 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: '#F8F5F0',      // warm off-white, the default ground
-        paperDeep: '#EEE8DD',  // a step darker, for alternating bands
-        ink: '#17120F',        // warm near-black, the default text colour
-        inkSoft: '#3E352F',    // secondary text: warm and dark, never grey
-        rule: '#DCD3C4',       // hairlines
+        paper: '#FFFFFF',      // the default ground: white, not beige
+        paperDeep: '#F4F5F6',  // a light neutral band, for alternating sections
+        ink: '#16181C',        // near-black text
+        inkSoft: '#4C525A',    // secondary text, used sparingly
+        rule: '#E2E5E8',       // hairlines and card borders
         // One red, used everywhere. `deep` exists only for hover and pressed
         // states; nothing else should introduce another red.
         red: {
-          DEFAULT: '#A6201A',
-          deep: '#851610',
+          DEFAULT: '#C41E25',
+          deep: '#9E151B',
+          tint: '#FBEEEE',     // the faintest red wash, for icon badges
         },
       },
       fontFamily: {
@@ -24,6 +25,7 @@ export default {
         tighter: '-0.032em',
       },
       maxWidth: { shell: '1320px', prose: '46ch' },
+      borderRadius: { card: '6px' },
       transitionTimingFunction: {
         out: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
       },

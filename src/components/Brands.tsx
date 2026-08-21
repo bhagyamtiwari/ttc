@@ -10,7 +10,7 @@ export default function Brands() {
     <section aria-labelledby="brands" className="border-b border-rule py-16 md:py-20 lg:py-24">
       <div className="shell">
         <Rise className="max-w-[46rem]">
-          <h2 id="brands" className="display text-[clamp(2.1rem,7.5vw,2.9rem)] uppercase md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
+          <h2 id="brands" className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             Brands we supply
           </h2>
           <p className="lede mt-5">

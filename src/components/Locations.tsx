@@ -7,7 +7,7 @@ export default function Locations() {
     <section id="locations" className="border-b border-rule bg-paperDeep py-16 md:py-20 lg:py-24">
       <div className="shell">
         <Rise className="max-w-[46rem]">
-          <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] uppercase md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
+          <h2 className="display text-[clamp(2.1rem,7.5vw,2.9rem)] md:text-[clamp(2.4rem,4.2vw,3.2rem)]">
             Serving Delhi NCR
           </h2>
           <p className="lede mt-5">
@@ -18,7 +18,7 @@ export default function Locations() {
 
         <div className="mt-10 grid gap-5 md:mt-12 lg:grid-cols-2 lg:gap-6">
           {locations.map((location, i) => (
-            <Rise key={location.id} delay={i * 90} className="bg-white">
+            <Rise key={location.id} delay={i * 90} className="overflow-hidden rounded-card border border-rule bg-paper">
               <div className="aspect-[16/10] w-full sm:aspect-[2/1]">
                 <iframe
                   src={location.mapsEmbed}

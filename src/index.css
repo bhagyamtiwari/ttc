@@ -47,9 +47,10 @@
     @apply text-[19px] leading-[1.55] text-ink/80 md:text-[20px];
   }
 
-  /* A category name, set as signage rather than a card title. */
+  /* A category or place name. Bold and tight, but sentence case: caps on
+     every card title turns a product list into a wall of shouting. */
   .signage {
-    @apply font-bold uppercase leading-[0.95] tracking-tighter;
+    @apply font-extrabold leading-[1.1] tracking-tighter;
   }
 
   .link-underline {

@@ -58,7 +58,7 @@ export default function Navbar() {
           <a
             href={whatsappHref()}
             {...waLinkProps}
-            className="inline-flex items-center gap-2 bg-red px-6 py-3.5 text-[16px] font-bold leading-none text-paper transition-colors hover:bg-red-deep"
+            className="inline-flex items-center gap-2 rounded-card bg-red px-6 py-3.5 text-[16px] font-bold leading-none text-paper transition-colors hover:bg-red-deep"
           >
             <WhatsAppMark className="h-[17px] w-[17px]" />
             WhatsApp us
@@ -93,7 +93,7 @@ export default function Navbar() {
             href={whatsappHref()}
             {...waLinkProps}
             onClick={() => setOpen(false)}
-            className="mt-7 inline-flex items-center justify-center gap-2.5 bg-red px-6 py-4 text-[17px] font-bold leading-none text-paper"
+            className="mt-7 inline-flex items-center justify-center gap-2.5 rounded-card bg-red px-6 py-4 text-[17px] font-bold leading-none text-paper"
           >
             <WhatsAppMark />
             WhatsApp us

@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
       <a
         href={whatsappHref()}
         {...waLinkProps}
-        className="flex w-full items-center justify-center gap-2.5 bg-red px-6 py-4 text-[17px] font-bold leading-none text-paper"
+        className="flex w-full items-center justify-center gap-2.5 rounded-card bg-red px-6 py-4 text-[17px] font-bold leading-none text-paper"
       >
         <WhatsAppMark />
         WhatsApp Us
