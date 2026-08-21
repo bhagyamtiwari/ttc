@@ -11,7 +11,7 @@ export default function StatementStrip() {
     <section aria-label="What we supply and why businesses call us" className="border-b border-rule bg-paperDeep">
       <div className="shell grid gap-8 py-10 md:py-11 lg:grid-cols-[minmax(0,35fr)_minmax(0,65fr)] lg:items-center lg:gap-12">
         <Rise>
-          <p className="max-w-[24ch] text-[25px] font-semibold leading-[1.2] tracking-tighter md:text-[28px]">
+          <p className="max-w-[24ch] text-[26px] font-extrabold leading-[1.15] tracking-tightest md:text-[30px]">
             From the <span className="text-red">coffee</span> in your pantry to the{' '}
             <span className="text-red">cleaning</span> in your cupboard.
           </p>
@@ -22,10 +22,10 @@ export default function StatementStrip() {
             <Rise as="li" key={point.title} delay={i * 70} className="flex items-start gap-4 lg:flex-col lg:gap-3.5">
               <StripIcon name={point.icon} className="h-8 w-8 shrink-0 text-red" />
               <div>
-                <h2 className="text-[16.5px] font-semibold leading-snug tracking-[-0.012em]">
+                <h2 className="text-[16.5px] font-bold leading-snug tracking-[-0.012em]">
                   {point.title}
                 </h2>
-                <p className="mt-1.5 text-[15.5px] leading-[1.45] text-inkSoft">{point.copy}</p>
+                <p className="mt-1.5 text-[16px] leading-[1.45] text-inkSoft">{point.copy}</p>
               </div>
             </Rise>
           ))}

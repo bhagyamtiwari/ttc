@@ -5,13 +5,16 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 76px;
+    scroll-padding-top: 84px;
     -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply bg-paper text-ink font-sans antialiased;
     font-size: 17px;
+    /* Medium as the base weight. Text at 400 reads thin and washed out
+       against a warm ground; 500 gives every line presence. */
+    font-weight: 500;
     overflow-x: hidden;
   }
 
@@ -37,16 +40,16 @@
 
   /* Editorial display type. Tight, confident, never timid. */
   .display {
-    @apply font-sans font-semibold leading-[0.95] tracking-tightest;
+    @apply font-sans font-extrabold leading-[0.92] tracking-tightest;
   }
 
   .lede {
-    @apply text-[19px] leading-[1.55] text-inkSoft md:text-[20px];
+    @apply text-[19px] leading-[1.55] text-ink/80 md:text-[20px];
   }
 
   /* A category name, set as signage rather than a card title. */
   .signage {
-    @apply font-semibold uppercase leading-[0.95] tracking-tighter;
+    @apply font-bold uppercase leading-[0.95] tracking-tighter;
   }
 
   .link-underline {

@@ -20,7 +20,7 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <Rise as="li" key={step.n} delay={i * 90} className="border-t-2 border-red pt-6">
               <span className="block text-[15px] font-bold tracking-[0.14em] text-red">{step.n}</span>
-              <h3 className="mt-4 text-[24px] font-semibold leading-[1.15] tracking-tighter md:text-[26px]">
+              <h3 className="mt-4 text-[24px] font-bold leading-[1.15] tracking-tighter md:text-[26px]">
                 {step.title}
               </h3>
               <p className="mt-3 max-w-[30rem] text-[17px] leading-[1.55] text-inkSoft md:text-[18px]">

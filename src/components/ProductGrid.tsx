@@ -35,7 +35,7 @@ function Card({ card, index }: { card: ProductCard; index: number }) {
               `Hello Tiwari Trading Company, I would like to enquire about ${card.name} for my workplace.`,
             )}
             {...waLinkProps}
-            className="mt-5 inline-flex items-center gap-2 self-start text-[16px] font-semibold text-red"
+            className="mt-5 inline-flex items-center gap-2 self-start text-[16px] font-bold text-red"
           >
             Enquire
             <Arrow className="h-[15px] w-[15px] transition-transform duration-200 group-hover:translate-x-1" />
@@ -69,14 +69,14 @@ export default function ProductGrid() {
 
         <Rise className="mt-10 border-t border-rule pt-7 md:mt-12">
           <p className="text-[17px] leading-[1.6] text-inkSoft md:text-[18px]">
-            <span className="font-semibold text-ink">Also supplied: </span>
+            <span className="font-bold text-ink">Also supplied: </span>
             {alsoSupplied.join(' · ')}.{' '}
             <a
               href={whatsappHref(
                 'Hello Tiwari Trading Company, I am looking for a specific product. Could you help source it?',
               )}
               {...waLinkProps}
-              className="font-semibold text-red link-underline"
+              className="font-bold text-red link-underline"
             >
               Ask us about anything else
             </a>

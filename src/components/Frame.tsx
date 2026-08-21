@@ -39,7 +39,7 @@ type Props = {
 const tones: Record<Tone, { bg: string; type: string; stencil: string }> = {
   warm: { bg: 'bg-[#E7DFD2]', type: 'text-ink/25', stencil: 'text-ink/40' },
   dark: { bg: 'bg-ink', type: 'text-paper/25', stencil: 'text-paper/40' },
-  red: { bg: 'bg-red-deep', type: 'text-paper/30', stencil: 'text-paper/50' },
+  red: { bg: 'bg-red', type: 'text-paper/30', stencil: 'text-paper/50' },
 }
 
 /**
@@ -91,7 +91,7 @@ export default function Frame({
             label ? 'justify-between' : 'items-center justify-center'
           }`}
         >
-          <span className={`text-[10px] font-medium uppercase tracking-[0.2em] ${t.stencil}`}>
+          <span className={`text-[11px] font-semibold uppercase tracking-[0.2em] ${t.stencil}`}>
             Photo to follow
           </span>
           {label && (

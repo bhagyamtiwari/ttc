@@ -4,15 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: '#F7F4EE',      // warm off-white, the default ground
-        paperDeep: '#EFE9DF',  // a step darker, for alternating bands
-        ink: '#141110',        // near-black text
-        inkSoft: '#57504A',    // secondary text (still large, never tiny)
-        rule: '#D8CFC1',       // hairlines
+        paper: '#F8F5F0',      // warm off-white, the default ground
+        paperDeep: '#EEE8DD',  // a step darker, for alternating bands
+        ink: '#17120F',        // warm near-black, the default text colour
+        inkSoft: '#3E352F',    // secondary text: warm and dark, never grey
+        rule: '#DCD3C4',       // hairlines
+        // One red, used everywhere. `deep` exists only for hover and pressed
+        // states; nothing else should introduce another red.
         red: {
-          DEFAULT: '#A82A20',  // TTC red
-          deep: '#7E1D15',
-          ink: '#4A100B',
+          DEFAULT: '#A6201A',
+          deep: '#851610',
         },
       },
       fontFamily: {

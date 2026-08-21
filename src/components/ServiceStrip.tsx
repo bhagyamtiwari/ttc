@@ -11,10 +11,10 @@ export default function ServiceStrip() {
           <Rise as="div" key={point.title} delay={i * 70} className="flex items-start gap-4">
             <StripIcon name={point.icon} className="h-9 w-9 shrink-0 text-red" />
             <div>
-              <h2 className="text-[17px] font-semibold leading-snug tracking-[-0.012em]">
+              <h2 className="text-[17px] font-bold leading-snug tracking-[-0.012em]">
                 {point.title}
               </h2>
-              <p className="mt-1.5 text-[15.5px] leading-[1.45] text-inkSoft">{point.copy}</p>
+              <p className="mt-1.5 text-[16px] leading-[1.45] text-inkSoft">{point.copy}</p>
             </div>
           </Rise>
         ))}

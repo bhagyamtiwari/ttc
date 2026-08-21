@@ -40,7 +40,7 @@ export default function Navbar() {
         Skip to products
       </a>
 
-      <div className="shell flex h-[68px] items-center justify-between md:h-[76px]">
+      <div className="shell flex h-[72px] items-center justify-between md:h-[84px]">
         <a href="#top" aria-label="Tiwari Trading Company, back to top">
           <Logo />
         </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[16px] font-medium tracking-[-0.01em] text-ink/70 transition-colors hover:text-ink"
+              className="text-[16px] font-semibold tracking-[-0.01em] text-ink transition-colors hover:text-red"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <a
             href={whatsappHref()}
             {...waLinkProps}
-            className="inline-flex items-center gap-2 bg-red px-5 py-3 text-[15px] font-semibold leading-none text-paper transition-colors hover:bg-red-deep"
+            className="inline-flex items-center gap-2 bg-red px-6 py-3.5 text-[16px] font-bold leading-none text-paper transition-colors hover:bg-red-deep"
           >
             <WhatsAppMark className="h-[17px] w-[17px]" />
             WhatsApp us
@@ -84,7 +84,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-rule py-5 text-[26px] font-semibold tracking-tighter text-ink"
+              className="border-b border-rule py-5 text-[26px] font-bold tracking-tighter text-ink"
             >
               {link.label}
             </a>
@@ -93,7 +93,7 @@ export default function Navbar() {
             href={whatsappHref()}
             {...waLinkProps}
             onClick={() => setOpen(false)}
-            className="mt-7 inline-flex items-center justify-center gap-2.5 bg-red px-6 py-4 text-[17px] font-semibold leading-none text-paper"
+            className="mt-7 inline-flex items-center justify-center gap-2.5 bg-red px-6 py-4 text-[17px] font-bold leading-none text-paper"
           >
             <WhatsAppMark />
             WhatsApp us

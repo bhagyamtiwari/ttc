@@ -24,12 +24,12 @@ export default function Brands() {
             {brands.map((brand) => (
               <li
                 key={brand}
-                className="break-inside-avoid py-[7px] text-[18px] font-medium leading-[1.3] tracking-[-0.015em] text-ink/80 transition-colors duration-150 hover:text-ink md:text-[19px]"
+                className="break-inside-avoid py-[7px] text-[18px] font-semibold leading-[1.3] tracking-[-0.015em] text-ink transition-colors duration-150 hover:text-red md:text-[19px]"
               >
                 {brand}
               </li>
             ))}
-            <li className="break-inside-avoid py-[7px] text-[18px] font-semibold leading-[1.3] tracking-[-0.015em] text-red md:text-[19px]">
+            <li className="break-inside-avoid py-[7px] text-[18px] font-bold leading-[1.3] tracking-[-0.015em] text-red md:text-[19px]">
               And many more
             </li>
           </ul>
@@ -43,7 +43,7 @@ export default function Brands() {
                 'Hello Tiwari Trading Company, do you supply the following brand?',
               )}
               {...waLinkProps}
-              className="font-semibold text-red link-underline"
+              className="font-bold text-red link-underline"
             >
               Ask us
             </a>

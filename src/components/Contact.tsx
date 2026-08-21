@@ -5,7 +5,7 @@ import { business, hasPhone, hasWhatsapp, waLinkProps, whatsappHref } from '../d
 
 const field =
   'w-full border border-paper/25 bg-transparent px-4 py-3.5 text-[17px] text-paper placeholder:text-paper/35 focus:border-paper/60 focus:outline-none'
-const label = 'block text-[16px] font-medium text-paper/70'
+const label = 'block text-[16px] font-semibold text-paper/75'
 
 /**
  * No backend. The form composes a WhatsApp message from the fields, unless an
@@ -45,7 +45,7 @@ function RequirementForm() {
       method={usesEndpoint ? 'POST' : undefined}
       className="border border-paper/15 p-6 md:p-8"
     >
-      <h3 className="text-[19px] font-semibold tracking-tighter text-paper">
+      <h3 className="text-[19px] font-bold tracking-tighter text-paper">
         Or send your requirement here
       </h3>
       <p className="mt-2 text-[16px] leading-[1.5] text-paper/60">
@@ -84,7 +84,7 @@ function RequirementForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full border border-paper/40 px-7 py-3.5 text-[16px] font-semibold text-paper transition-colors duration-200 hover:bg-paper hover:text-ink sm:w-auto"
+        className="mt-6 w-full border border-paper/40 px-7 py-3.5 text-[16px] font-bold text-paper transition-colors duration-200 hover:bg-paper hover:text-ink sm:w-auto"
       >
         Send requirement
       </button>
@@ -116,7 +116,7 @@ export default function Contact() {
           <a
             href={whatsappHref()}
             {...waLinkProps}
-            className="mt-9 inline-flex w-full items-center justify-center gap-3 bg-red px-8 py-5 text-[19px] font-semibold leading-none text-paper transition-colors duration-200 hover:bg-red-deep sm:w-auto"
+            className="mt-9 inline-flex w-full items-center justify-center gap-3 bg-red px-8 py-5 text-[19px] font-bold leading-none text-paper transition-colors duration-200 hover:bg-red-deep sm:w-auto"
           >
             <WhatsAppMark className="h-[21px] w-[21px]" />
             WhatsApp Us

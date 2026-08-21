@@ -45,7 +45,7 @@ export default function Locations() {
                   href={location.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex shrink-0 items-center gap-2 self-start text-[16px] font-semibold text-red sm:self-end"
+                  className="group inline-flex shrink-0 items-center gap-2 self-start text-[16px] font-bold text-red sm:self-end"
                 >
                   Directions
                   <Arrow className="h-[15px] w-[15px] transition-transform duration-200 group-hover:translate-x-1" />

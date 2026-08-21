@@ -25,9 +25,11 @@ export default function About() {
               </p>
             </div>
 
-            <p className="mt-9 max-w-[36rem] text-[18px] leading-[1.7] text-inkSoft md:text-[19px]">
-              <span className="font-semibold text-ink">We supply </span>
-              {servedSegments.join(', ').toLowerCase()}.
+            <h3 className="mt-10 text-[20px] font-extrabold tracking-tighter text-ink md:text-[22px]">
+              Who we supply
+            </h3>
+            <p className="mt-3 max-w-[36rem] text-[18px] leading-[1.7] text-inkSoft md:text-[19px]">
+              {servedSegments.join(' · ')}
             </p>
           </div>
         </Rise>

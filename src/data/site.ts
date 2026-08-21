@@ -28,9 +28,9 @@ export const business = {
      Any field left empty is hidden automatically, and the WhatsApp buttons
      fall back to the contact form until a number is added.
   --------------------------------------------------------------------------- */
-  whatsappNumber: '', // e.g. '919812345678'
-  phoneDisplay: '',   // e.g. '+91 98123 45678'
-  phoneDial: '',      // e.g. '+919812345678'
+  whatsappNumber: '918130701521',
+  phoneDisplay: '+91 81307 01521',
+  phoneDial: '+918130701521',
   email: '',          // e.g. 'sales@tiwaritradingcompany.com'
 
   /* Pre-filled message that opens in WhatsApp when someone taps a CTA. */
