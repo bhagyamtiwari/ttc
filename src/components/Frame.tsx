@@ -7,7 +7,12 @@ type Props = {
   folder: string
   /** Which image in that folder (wraps around if fewer exist). */
   index?: number
-  /** Describes the products shown, for screen readers and SEO. */
+  /**
+   * Describes the products shown, for screen readers and SEO. Used only when
+   * this section has photographs of its own; a borrowed photograph gets a
+   * general description instead, so the alt text never claims to show
+   * something it does not.
+   */
   alt: string
   /**
    * Large text shown on the holding plate until a photograph is added.
@@ -23,6 +28,12 @@ type Props = {
   priority?: boolean
   /** Slow zoom-out on hover. Off by default. */
   hover?: boolean
+  /**
+   * Replaces the default `h-full w-full object-cover` on the <img>. Use when a
+   * photograph needs different fitting at different breakpoints, as the wide
+   * hero lineup does.
+   */
+  imgClassName?: string
 }
 
 const tones: Record<Tone, { bg: string; type: string; stencil: string }> = {
@@ -48,6 +59,7 @@ export default function Frame({
   className = '',
   priority = false,
   hover = false,
+  imgClassName,
 }: Props) {
   const src = imageFor(folder, index)
   const t = tones[tone]
@@ -62,7 +74,7 @@ export default function Frame({
           decoding={priority ? 'sync' : 'async'}
           // @ts-expect-error fetchpriority is valid HTML, not yet in React's types
           fetchpriority={priority ? 'high' : undefined}
-          className={`h-full w-full object-cover ${
+          className={`${imgClassName ?? 'h-full w-full object-cover'} ${
             hover ? 'transition-transform duration-[900ms] ease-out hover:scale-[1.03]' : ''
           }`}
         />
