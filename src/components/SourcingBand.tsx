@@ -24,7 +24,7 @@ export default function SourcingBand() {
               'Hello Tiwari Trading Company, I am looking for a specific product. Could you help source it?',
             )}
             {...waLinkProps}
-            className="inline-flex w-full items-center justify-center gap-2.5 rounded-card bg-paper px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-white lg:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2.5 rounded-card bg-paper px-7 py-4 text-[17px] font-bold leading-none text-red transition-colors duration-200 hover:bg-red-tint lg:w-auto"
           >
             <WhatsAppMark />
             Ask us on WhatsApp
